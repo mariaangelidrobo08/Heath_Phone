@@ -1,0 +1,685 @@
+
+/* ==========================================
+   1. VARIABLES Y RESET BÁSICO
+========================================== */
+
+:root {
+    --bg-color: #05090D;
+    --surface-color: rgba(13, 24, 32, 0.82);
+    --text-main: #F5F7FA;
+    --text-muted: #C0CBD5;
+    --primary: #8B0000;
+    --primary-hover: #B5121B;
+    --accent: rgba(139, 0, 0, 0.25);
+    --border-color: rgba(180, 205, 220, 0.20);
+    --border-radius: 14px;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+
+    /* Fondo oscuro con imagen de aplicaciones */
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 13, 0.88),
+            rgba(3, 8, 13, 0.94)
+        ),
+        url("fondo-telefono.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: inherit;
+}
+
+/* ==========================================
+   2. HEADER / ENCABEZADO
+========================================== */
+
+header {
+    background: rgba(5, 10, 15, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.logo h1::first-letter {
+    color: #E53B45;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #FF626B;
+}
+
+header nav a.btn-nav {
+    color: white;
+    border: 1px solid #A72B35;
+    padding: 0.45rem 1.1rem;
+    border-radius: 25px;
+    background: rgba(139, 0, 0, 0.12);
+}
+
+header nav a.btn-nav:hover {
+    background: var(--primary);
+    border-color: #E53B45;
+}
+
+/* ==========================================
+   3. SECCIONES GENERALES
+========================================== */
+
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+section {
+    position: relative;
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 85px;
+}
+
+section h2 {
+    font-size: 2.3rem;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+    text-align: center;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+}
+
+section > p {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   4. HERO / PORTADA PRINCIPAL
+========================================== */
+
+#hero {
+    min-height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 4.5rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Imagen decorativa a la izquierda */
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 46%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 9, 13, 0.05) 30%,
+            rgba(5, 9, 13, 0.8) 85%,
+            #05090D 100%
+        ),
+        url("../img/fondo-telefono.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 58%;
+    text-align: center;
+}
+
+.hero-content h2 {
+    max-width: 750px;
+    margin: 0 auto 1.2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.18;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: #D5DEE7;
+    font-size: 1.08rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+    background: linear-gradient(135deg, #A20A12, #710000);
+    color: white;
+
+    padding: 0.85rem 1.8rem;
+    border: 1px solid #F0B5B8;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 600;
+
+    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.22);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #C51620, #900008);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(180, 0, 15, 0.35);
+}
+
+/* ==========================================
+   5. EL PROBLEMA / ESTADÍSTICAS
+========================================== */
+
+#problema {
+    background: rgba(5, 10, 15, 0.35);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    background: var(--surface-color);
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    text-align: center;
+    backdrop-filter: blur(12px);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(220, 60, 70, 0.55);
+    background: rgba(19, 31, 41, 0.95);
+}
+
+.stat-box h3 {
+    font-size: 2.3rem;
+    color: #FF5A64;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.stat-box p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+/* ==========================================
+   6. SÍNTOMAS
+========================================== */
+
+#sintomas {
+    background: rgba(5, 10, 15, 0.38);
+}
+
+#sintomas ul {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#sintomas li {
+    background: var(--surface-color);
+    padding: 1.2rem 1.5rem;
+
+    border: 1px solid var(--border-color);
+    border-left: 4px solid #B20C18;
+    border-radius: 9px;
+
+    color: #E4EAF0;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+#sintomas li:hover {
+    background: rgba(36, 24, 30, 0.92);
+    border-left-color: #FF5A64;
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   7. AUTOTEST
+========================================== */
+
+#autotest {
+    background: rgba(5, 10, 15, 0.45);
+}
+
+.test-placeholder {
+    max-width: 750px;
+    margin: 0 auto;
+
+    background: rgba(15, 27, 36, 0.82);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    backdrop-filter: blur(12px);
+}
+
+.test-placeholder p {
+    margin-bottom: 1.5rem;
+    font-style: normal;
+}
+
+.test-placeholder .btn-primary {
+    margin-top: 0.5rem;
+}
+
+/* ==========================================
+   8. SOLUCIONES / TARJETAS
+========================================== */
+
+#soluciones {
+    background: rgba(5, 10, 15, 0.35);
+}
+
+.grid-soluciones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-soluciones article {
+    background: var(--surface-color);
+    padding: 2rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(12px);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.grid-soluciones article:hover {
+    transform: translateY(-6px);
+    border-color: rgba(220, 60, 70, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.grid-soluciones h3 {
+    font-size: 1.25rem;
+    color: #FF626B;
+    margin-bottom: 0.9rem;
+}
+
+.grid-soluciones p {
+    color: var(--text-muted);
+    text-align: left;
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+/* ==========================================
+   9. CONTACTO / FORMULARIO
+========================================== */
+
+#contacto {
+    text-align: center;
+    border-bottom: none;
+    background: rgba(5, 10, 15, 0.35);
+}
+
+#contacto form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    max-width: 600px;
+    margin: 2rem auto 0;
+    flex-wrap: wrap;
+}
+
+#contacto input[type="email"] {
+    flex: 1;
+    min-width: 220px;
+
+    padding: 0.9rem 1.2rem;
+    border: 1px solid #354653;
+    border-radius: 30px;
+
+    font-size: 1rem;
+    outline: none;
+
+    background: rgba(17, 28, 37, 0.95);
+    color: white;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#contacto input[type="email"]::placeholder {
+    color: #A9B5C0;
+}
+
+#contacto input[type="email"]:focus {
+    border-color: #C43C46;
+    box-shadow: 0 0 0 3px rgba(196, 60, 70, 0.12);
+}
+
+#contacto button[type="submit"] {
+    padding: 0.9rem 1.5rem;
+
+    background: linear-gradient(135deg, #A20A12, #710000);
+    color: white;
+
+    border: 1px solid #D75A62;
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+    background: #B5121B;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   10. FOOTER / PIE DE PÁGINA
+========================================== */
+
+footer {
+    background: rgba(4, 8, 12, 0.96);
+    border-top: 1px solid var(--border-color);
+
+    padding: 2rem 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FF626B;
+}
+
+/* ==========================================
+   11. DISEÑO RESPONSIVO / TABLET Y MÓVIL
+========================================== */
+
+@media (max-width: 900px) {
+    header {
+        padding: 1rem 4%;
+    }
+
+    header nav ul {
+        gap: 1rem;
+    }
+
+    .stats-container,
+    .grid-soluciones {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #hero {
+        min-height: 340px;
+    }
+
+    #hero::before {
+        width: 43%;
+    }
+
+    .hero-content {
+        width: 62%;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem 1rem;
+    }
+
+    header nav a {
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 0 5%;
+    }
+
+    section {
+        padding: 3.5rem 0;
+    }
+
+    section h2 {
+        font-size: 1.9rem;
+    }
+
+    section > p {
+        font-size: 0.98rem;
+    }
+
+    #hero {
+        min-height: 470px;
+        justify-content: center;
+        padding: 3rem 0;
+    }
+
+    #hero::before {
+        width: 100%;
+        opacity: 0.38;
+
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(5, 9, 13, 0.25),
+                rgba(5, 9, 13, 0.95)
+            ),
+            url("fondo-telefono.jpg");
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .stats-container,
+    .grid-soluciones {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box {
+        padding: 1.7rem 1.2rem;
+    }
+
+    .stat-box h3 {
+        font-size: 2rem;
+    }
+
+    .grid-soluciones article {
+        padding: 1.7rem;
+    }
+
+    .test-placeholder {
+        padding: 2rem 1.2rem;
+    }
+
+    #contacto form {
+        flex-direction: column;
+    }
+
+    #contacto input[type="email"] {
+        width: 100%;
+        min-width: 0;
+        flex: auto;
+    }
+
+    #contacto button[type="submit"] {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    footer ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* ==========================================
+   12. ACCESIBILIDAD
+========================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #FF626B;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

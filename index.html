@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Health-Phone: aprende a reconocer y mejorar tus hábitos de uso del teléfono.">
+
+    <title>Health-Phone | Bienestar Digital</title>
+
+    <!-- Conectar el archivo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/comandos.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================
+         1. ENCABEZADO Y MENÚ DE NAVEGACIÓN
+    ====================================== -->
+
+    <header>
+        <div class="logo">
+            <h1>Health-Phone</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#problema">El Problema</a></li>
+                <li><a href="#sintomas">Síntomas</a></li>
+                <li><a href="#autotest">Autotest</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#contacto" class="btn-nav">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- =====================================
+         2. CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- PORTADA PRINCIPAL -->
+
+        <section id="hero">
+
+            <div class="hero-content">
+
+                <h2>
+                    ¿Tu teléfono controla tu vida
+                    o tú controlas tu teléfono?
+                </h2>
+
+                <p>
+                    El primer paso para recuperar tu atención,
+                    tu tiempo y tu paz mental es reconocerlo.
+                </p>
+
+                <a href="#autotest" class="btn-primary">
+                    Haz el test rápido →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        
+
+        <!-- =====================================
+             4. SÍNTOMAS
+        ====================================== -->
+
+        <section id="sintomas">
+
+            <h2>Señales de alerta</h2>
+
+            <p>
+                ¿Te identificas con alguna de estas situaciones?
+            </p>
+
+            <ul>
+
+                <li>
+                    Revisas el teléfono constantemente,
+                    incluso cuando no tienes notificaciones.
+                </li>
+
+                <li>
+                    Te cuesta concentrarte en tus tareas
+                    porque quieres mirar la pantalla.
+                </li>
+
+                <li>
+                    Utilizas el teléfono hasta muy tarde
+                    y descansas menos de lo que necesitas.
+                </li>
+
+                <li>
+                    Sientes incomodidad cuando no tienes
+                    el teléfono cerca.
+                </li>
+
+                <li>
+                    Dejas de compartir tiempo con otras personas
+                    por permanecer conectado.
+                </li>
+
+                <li>
+                    Utilizas el teléfono para distraerte
+                    y terminas pasando más tiempo del esperado.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =====================================
+             5. AUTOTEST
+        ====================================== -->
+
+        <section id="autotest">
+
+            <h2>Autotest digital</h2>
+
+            <p>
+                Reflexiona sobre tus hábitos y descubre
+                si necesitas establecer límites de uso.
+            </p>
+
+            <div class="test-placeholder">
+
+                <p>
+                    Responde unas preguntas sobre tu uso diario
+                    del teléfono y conoce mejor tus hábitos.
+                </p>
+
+                <a href="#preguntas" class="btn-primary">
+                    Comenzar el test →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             6. PREGUNTAS DEL TEST
+        ====================================== -->
+
+        <section id="preguntas">
+
+            <h2>Conoce tus hábitos</h2>
+
+            <p>
+                Selecciona la respuesta que mejor describa
+                tu comportamiento habitual.
+            </p>
+
+            <form id="test-form">
+
+                <div class="test-placeholder">
+
+                    <p>
+                        <strong>1. ¿Con qué frecuencia revisas
+                        tu teléfono sin una razón específica?</strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="pregunta1"
+                               value="0" required>
+                        Casi nunca
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta1"
+                               value="1">
+                        Algunas veces
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta1"
+                               value="2">
+                        Muy frecuentemente
+                    </label>
+
+                    <hr>
+
+                    <p>
+                        <strong>2. ¿El uso del teléfono afecta
+                        tu sueño o tus actividades?</strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="pregunta2"
+                               value="0" required>
+                        Nunca o casi nunca
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta2"
+                               value="1">
+                        Algunas veces
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta2"
+                               value="2">
+                        Frecuentemente
+                    </label>
+
+                    <hr>
+
+                    <p>
+                        <strong>3. ¿Te cuesta dejar el teléfono
+                        cuando necesitas concentrarte?</strong>
+                    </p>
+
+                    <label>
+                        <input type="radio" name="pregunta3"
+                               value="0" required>
+                        No, puedo dejarlo fácilmente
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta3"
+                               value="1">
+                        A veces me cuesta
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" name="pregunta3"
+                               value="2">
+                        Sí, me cuesta bastante
+                    </label>
+
+                    <br><br>
+
+                    <button type="submit" class="btn-primary">
+                        Ver mis respuestas
+                    </button>
+
+                    <p id="resultado-test" role="status"
+                       aria-live="polite"></p>
+
+                    <p>
+                        Este cuestionario es orientativo y no
+                        constituye un diagnóstico profesional.
+                    </p>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================
+             7. SOLUCIONES
+        ====================================== -->
+
+        <section id="soluciones">
+
+            <h2>Recupera el control</h2>
+
+            <p>
+                Pequeños cambios pueden ayudarte a conseguir
+                una relación más equilibrada con la tecnología.
+            </p>
+
+            <div class="grid-soluciones">
+
+                <article>
+
+                    <h3>01. Establece límites</h3>
+
+                    <p>
+                        Define momentos del día para revisar
+                        tus aplicaciones y evita utilizarlas
+                        durante tus tareas importantes.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <h3>02. Desactiva notificaciones</h3>
+
+                    <p>
+                        Silencia las alertas que no sean
+                        necesarias para reducir distracciones
+                        durante tus actividades.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <h3>03. Descansa de la pantalla</h3>
+
+                    <p>
+                        Dedica tiempo a caminar, leer,
+                        practicar tus pasatiempos y compartir
+                        momentos con otras personas.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <h3>04. Cuida tu descanso</h3>
+
+                    <p>
+                        Intenta dejar el teléfono antes
+                        de dormir y crea una rutina tranquila
+                        para descansar mejor.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <h3>05. Vive el presente</h3>
+
+                    <p>
+                        Durante las comidas y conversaciones,
+                        guarda el teléfono y presta atención
+                        a las personas que te acompañan.
+                    </p>
+
+                </article>
+
+                <article>
+
+                    <h3>06. Busca apoyo</h3>
+
+                    <p>
+                        Si sientes que no puedes controlar
+                        su uso y afecta tu vida diaria,
+                        habla con alguien de confianza
+                        o con un profesional.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             8. CONTACTO Y AYUDA
+        ====================================== -->
+
+        <section id="contacto">
+
+            <h2>Tu bienestar importa</h2>
+
+            <p>
+                Empieza hoy a construir una relación
+                más saludable con tu teléfono.
+            </p>
+
+            <form id="contacto-form">
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Escribe tu correo electrónico"
+                    aria-label="Correo electrónico"
+                    required
+                >
+
+                <button type="submit">
+                    Quiero recibir consejos
+                </button>
+
+            </form>
+
+            <p id="mensaje-contacto"
+               role="status"
+               aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         9. PIE DE PÁGINA
+    ====================================== -->
+
+    <footer>
+
+        <div class="logo">
+            <h1>Health-Phone</h1>
+            <p>La tecnología debe ayudarte, no controlarte.</p>
+        </div>
+
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="#problema">El Problema</a></li>
+                <li><a href="#sintomas">Síntomas</a></li>
+                <li><a href="#autotest">Autotest</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#contacto">Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            © 2026 Health-Phone. Proyecto educativo de bienestar digital.
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================
+         10. FUNCIONES BÁSICAS DE JAVASCRIPT
+    ====================================== -->
+
+  <!--  <script>
+
+        
+
+    </script> -->
+
+
+
+</body>
+
+</html>
+++
